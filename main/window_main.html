@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>Transparent</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="UTF-8">        
+        <link rel="stylesheet" type="text/css" href="window_main.css">
     </head>
     <body>
         <div class="window">
             <div id="top">
                 <table id="title">
                     <td id="titleicon">
-                        <img id="tl-icon" src="icon.png" alt="Icon">
+                        <img id="tl-icon" src="" alt="Icon">
                     </td>
                     <td id="titlemenu">
                         <button class="button" onclick="" id="tb-btn-menu">File</button>
-                        <button class="button" onclick="" id="tb-btn-menu">Edit</button>
-                        <button class="button" onclick="" id="tb-btn-menu">View</button>
-                        <button class="button" onclick="" id="tb-btn-menu">Repository</button>
                     </td>
                     <td id="titlebar">
                         <div id="titleborder"/>
-                        <div id="titletext">
-                            Electron GUI
-                        </div>
+                        <p id="titletext"/>
                     </td>
                     <td id="titlebutton">
                         <button class="button" onclick="exit()" id="tb-btn-exit">&#9932</button>
@@ -66,6 +60,6 @@
             <button class="button">Click</button>
             <button class="button">Click</button>
         </div>
-        <script src="window.js"></script>
+        <script src="window_main.js"></script>
     </body>
 </html>

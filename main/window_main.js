@@ -1,6 +1,14 @@
 const remote = require('electron').remote;
 var maximized = false;
 var deltaOpacity = 0.05;
+function main()
+{
+    var window_config = require('./resources/window_config.json');
+    var icon = document.getElementById("tl-icon");
+    icon.setAttribute("src", __dirname + window_config.icon);
+    var title = document.getElementById("titletext");
+    title.innerHTML = window_config.title;
+}
 function exit()
 {
     var window = remote.getCurrentWindow();
@@ -72,3 +80,4 @@ function maxi()
         }
     }
 }
+main();

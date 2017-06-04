@@ -25,7 +25,7 @@
     "nbuild": "node-gyp build --debug",
     "conf": "node-gyp configure --arch=x64",
     "postinstall": "npm run rebuild",
-    "start": "electron ./main"
+    "start": "electron ./main/program.js"
   },
   "author": "Shivan Modha",
   "license": "ISC"

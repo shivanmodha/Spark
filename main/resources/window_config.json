@@ -1,0 +1,9 @@
+{
+    "title": "Electron Spark",
+    "icon": "/resources/icon.png",
+    "width": 300,
+    "height": 300,
+    "minWidth": 300,
+    "minHeight": 300,
+    "developer": false
+}
