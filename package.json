@@ -19,6 +19,12 @@
     "nan": "^2.6.2"
   },
   "scripts": {
+    "rebuild": "node-gyp rebuild --target=1.6.8 --runtime=electron --arch=x64 --debug --dist-url=https://atom.io/download/atom-shell",
+    "build": "node-gyp build --target=1.6.8 --runtime=electron --arch=x64 --debug --dist-url=https://atom.io/download/atom-shell",
+    "nrebuild": "node-gyp rebuild --debug --arch=x64 --verbose",
+    "nbuild": "node-gyp build --debug",
+    "conf": "node-gyp configure --arch=x64",
+    "postinstall": "npm run rebuild",
     "start": "electron ./main"
   },
   "author": "Shivan Modha",
