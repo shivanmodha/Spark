@@ -1,0 +1,26 @@
+{
+  "name": "spark",
+  "version": "1.0.0",
+  "description": "A graphical user interface for electron apps.",
+  "main": "index.js",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "coffee-script": "^1.12.6",
+    "coffeelint": "^1.16.0",
+    "electron": "^1.6.8",
+    "mocha": "^3.4.1",
+    "node-gyp": "^3.6.1",
+    "node-pre-gyp": "^0.6.34",
+    "spectron": "^3.6.4"
+  },
+  "dependencies": {
+    "bindings": "^1.2.1",
+    "nan": "^2.6.2"
+  },
+  "scripts": {
+    "start": "electron ./main"
+  },
+  "author": "Shivan Modha",
+  "license": "ISC"
+}

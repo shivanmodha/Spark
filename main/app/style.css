@@ -1,0 +1,254 @@
+*
+{
+	margin: 0px;
+	-webkit-user-select: none;
+    user-select: none;
+	cursor: default;
+	font-family: "Segoe UI", cursive, sans-serif;
+	font-size: 10pt;
+	color: rgba(255, 255, 255, 0.5);
+}
+.window
+{
+	color: rgba(255, 255, 255, 1);
+	font-family: "Segoe UI", cursive, sans-serif;
+	font-size: 10pt;
+	text-align: left;
+}
+.window #top
+{
+	position: fixed;
+	right: 0px; /* BORDER ATTRIBUTE */
+	left: 0px; /* BORDER ATTRIBUTE */
+	height: 32px;
+	padding: 0px;
+	background: rgba(47, 77, 114, 0.50);
+}
+.window #title
+{
+	position: relative;
+	top: -3px;
+	border: 0px;
+	width: 100%;
+	margin-top: 0px;
+	padding: 0px;
+	height: 32px;
+	right: -3px;
+    border: 0px;
+	vertical-align: middle;
+}
+.window #titleicon
+{
+	-webkit-app-region: drag;
+    width: 20px;
+    height: 32px;
+}
+.window #titlemenu
+{
+	display: list-item;
+	height: 0px;
+}
+.window #titlebar
+{
+	-webkit-app-region: drag;
+	display: flex;
+	height: 29px;
+	vertical-align: middle;
+}
+.window #titlebutton
+{
+	padding: 0px;
+	width: 120px;
+	top: 0px;
+	vertical-align: middle;
+}
+.window #titleborder
+{
+	position: relative;
+	width: 1px;
+	background-color: rgba(255, 255, 255, 0.5);
+	height: 50%;
+	top: 25%;
+}
+.window #titletext
+{
+	position: relative;
+	white-space: nowrap;
+	width: 100%;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+.window #left
+{
+	position: fixed;
+	top: 32px;
+	left: 0px; /* BORDER ATTRIBUTE */
+	bottom: 0px; /* BORDER ATTRIBUTE */
+	right: auto;
+	width: 1px;
+	height: auto;
+	background: rgba(47, 77, 114, 0.50);
+}
+.window #bottom
+{
+	position: fixed;
+	top: auto;
+	left: 0px; /* BORDER ATTRIBUTE */
+	bottom: 0px; /* BORDER ATTRIBUTE */
+	right: 0px; /* BORDER ATTRIBUTE */
+	height: 1px;
+	background: rgba(47, 77, 114, 0.50);
+}
+.window #right
+{
+	position: fixed;
+	top: 32px;
+	left: auto;
+	right: 0px; /* BORDER ATTRIBUTE */
+	bottom: 0px; /* BORDER ATTRIBUTE */
+	width: 1px;
+	height: auto;
+	background: rgba(47, 77, 114, 0.50);
+}
+.container
+{
+	position: fixed;
+	top: 32px;
+	left: 0px; /* BORDER ATTRIBUTE */
+	bottom: 0px; /* BORDER ATTRIBUTE */
+	right: 0px; /* BORDER ATTRIBUTE */
+	height: auto;
+	overflow: auto;
+	color: rgba(255, 255, 255, 0.5);
+	background: rgba(0, 0, 0, 0.5);
+	text-align: justified;
+}
+#tl-icon
+{
+	position: fixed;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+}
+#tb-btn-exit
+{
+	-webkit-app-region: none;
+	width: 40px;
+	height: 32px;
+	background-color: rgba(255, 0, 0, 0.25);
+	float: right;
+}
+#tb-btn-exit:hover
+{
+	background-color: rgba(255, 0, 0, 1);
+}
+#tb-btn-exit:active
+{
+	background-color: rgba(0, 0, 0, 0.25);
+}
+#tb-btn-max
+{
+	-webkit-app-region: none;
+	width: 40px;
+	height: 32px;
+	background-color: rgba(0, 0, 0, 0);
+	float: right;
+}
+#tb-btn-max:hover
+{
+	background-color: rgba(255, 255, 255, 0.25);
+}
+#tb-btn-max:active
+{
+	background-color: rgba(0, 0, 0, 0.25);
+}
+#tb-btn-min
+{
+	-webkit-app-region: none;
+	width: 40px;
+	height: 32px;
+	background-color: rgba(0, 0, 0, 0);
+	float: right;
+}
+#tb-btn-min:hover
+{
+	background-color: rgba(255, 255, 255, 0.25);
+}
+#tb-btn-min:active
+{
+	background-color: rgba(0, 0, 0, 0.25);
+}
+#tb-btn-menu
+{
+	-webkit-app-region: none;
+	min-width: 40px;
+    width: fit-content;
+	height: 32px;
+	background-color: rgba(0, 0, 0, 0);
+	float: left;
+}
+#tb-btn-menu:hover
+{
+	background-color: rgba(255, 255, 255, 0.25);
+}
+#tb-btn-menu:active
+{
+	background-color: rgba(0, 0, 0, 0.25);
+}
+.button
+{
+	border: none;
+	width: 125px;
+	height: 25px;
+	outline: 0;
+	background-color: rgba(255, 235, 170, 0.25);
+	transition: background-color 0.1s ease, color 0.1s ease;
+	transition-delay: 0s;
+}
+.button:hover
+{
+	margin: 0px;
+	border: none;
+	background-color: rgba(255, 255, 255, 0.75);
+	color: rgba(0, 0, 0, 0.75);
+}
+.button:active
+{
+	margin: 0px;
+	border: none;
+	background-color: rgba(0, 0, 0, 0.75);
+	color: rgba(255, 255, 255, 0.25);
+}
+::-webkit-scrollbar
+{
+	width: 10px;
+	height: 10px;
+	background-color: rgba(255, 255, 255, 0.00);
+}
+::-webkit-scrollbar:hover
+{
+	background-color: rgba(255, 255, 255, 0.15);
+}
+::-webkit-scrollbar-thumb
+{
+	background-color: rgba(255, 255, 255, 0.25);
+}
+::-webkit-scrollbar-thumb:hover
+{
+	background-color: rgba(255, 255, 255, 0.75);
+}
+::-webkit-scrollbar-thumb:active
+{
+	background-color: rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-button
+{
+	height: 0px;
+	width: 0px;
+	background-color: rgba(0, 0, 0, 0.0);
+}
+::-webkit-scrollbar-corner
+{
+	background-color: rgba(0, 0, 0, 0);
+}
