@@ -8,5 +8,10 @@ cd electron-spark
 npm install
 npm start
 ```
+## Notes
+Make sure you have access to windows build tools
+```
+npm install --global windows-build-tools
+```
 ## Dependencies
 - electron-vibrancy, found at  https://github.com/arkenthera/electron-vibrancy
