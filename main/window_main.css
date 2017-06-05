@@ -40,13 +40,13 @@
 .window #titleicon
 {
 	-webkit-app-region: drag;
-	top: -10px;
-    width: 20px;
+    width: 10px;
     height: 32px;
 }
 .window #titlemenu
 {
 	display: list-item;
+	list-style-type: none;
 	height: 0px;
 }
 .window #titlebar
@@ -126,8 +126,8 @@
 }
 #tl-icon
 {
-	position: fixed;
-    top: 10px;
+	position: relative;
+    top: 2px;
     width: 16px;
     height: 16px;
     text-align: center;
@@ -177,6 +177,23 @@
 	background-color: rgba(255, 255, 255, 0.25);
 }
 #tb-btn-min:active
+{
+	background-color: rgba(0, 0, 0, 0.25);
+}
+#tb-btn-control
+{
+	-webkit-app-region: none;
+	min-width: 40px;
+    width: auto;
+	height: 32px;
+	background-color: rgba(0, 0, 0, 0);
+	float: right;
+}
+#tb-btn-control:hover
+{
+	background-color: rgba(255, 255, 255, 0.25);
+}
+#tb-btn-control:active
 {
 	background-color: rgba(0, 0, 0, 0.25);
 }

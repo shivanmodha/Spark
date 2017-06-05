@@ -7,15 +7,39 @@
     "minWidth": 300,
     "minHeight": 300,
     "developer": false,
-
-    "toolbar_minimize_show": true,
-    "toolbar_minimize_type": "line",
-
-    "toolbar_maximize_show": true,
-    "toolbar_maximize_type": "box stretch",
-
-    "toolbar_restore_type": "circle",
-
-    "toolbar_close_show": true,
-    "toolbar_close_type": "cross"
+    "control_box": 
+    [
+        {
+            "name": "Close",
+            "tooltip": false,
+            "text": "#cross",
+            "show": true,
+            "type": "tb-btn-exit",
+            "click": "event_titlebar_exit()"
+        },
+        {
+            "name": "Maximize",
+            "tooltip": false,
+            "text": "#box",
+            "show": true,
+            "type": "tb-btn-max",
+            "click": "event_titlebar_maximize()"
+        },
+        {
+            "name": "Minimize",
+            "tooltip": false,
+            "text": "#line",
+            "show": true,
+            "type": "tb-btn-min",
+            "click": "event_titlebar_minimize()"
+        },
+        {
+            "name": "Test",
+            "tooltip": false,
+            "text": "Test",
+            "show": true,
+            "type": "tb-btn-min",
+            "click": "test"
+        }
+    ]
 }
