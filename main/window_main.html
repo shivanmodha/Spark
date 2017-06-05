@@ -14,14 +14,11 @@
                     <td id="titlemenu">
                         <button class="button" onclick="" id="tb-btn-menu">File</button>
                     </td>
-                    <td id="titlebar">
+                    <td id="titlebar" onmousedown="event_titlebar_down()" onmousemove="event_titlebar_move()" onmouseup="event_titlebar_up()">
                         <div id="titleborder"/>
                         <p id="titletext"/>
                     </td>
                     <td id="titlebutton">
-                        <button class="button" onclick="exit()" id="tb-btn-exit">&#9932</button>
-                        <button class="button" onclick="maxi()" id="tb-btn-max">☐</button>
-                        <button class="button" onclick="mini()" id="tb-btn-min">__</button>
                     </td>
                 </table>
             </div>

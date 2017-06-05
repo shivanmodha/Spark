@@ -1,6 +1,6 @@
-# electron-spark
+# Electron Spark
 ## About
-electron-spark is a better graphical user interface for electron. 
+Electron Spark is a graphical user interface for electron.
 ## Installation
 ```
 git clone https://github.com/shivanmodha/electron-spark
@@ -8,8 +8,7 @@ cd electron-spark
 npm install
 npm start
 ```
-## Notes
-Make sure you have access to windows build tools
+Make sure you have access to windows build tools. If installing node_modules gives an error, try installing windows-build-tools with admin privileges.
 ```
 npm install --global windows-build-tools
 ```

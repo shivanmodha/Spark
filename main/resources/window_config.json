@@ -1,9 +1,21 @@
 {
     "title": "Electron Spark",
     "icon": "/resources/icon.png",
+    
     "width": 300,
     "height": 300,
     "minWidth": 300,
     "minHeight": 300,
-    "developer": false
+    "developer": false,
+
+    "toolbar_minimize_show": true,
+    "toolbar_minimize_type": "line",
+
+    "toolbar_maximize_show": true,
+    "toolbar_maximize_type": "box stretch",
+
+    "toolbar_restore_type": "circle",
+
+    "toolbar_close_show": true,
+    "toolbar_close_type": "cross"
 }
