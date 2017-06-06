@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">        
         <link rel="stylesheet" type="text/css" href="window_main.css">
+        <link rel="stylesheet" type="text/css" href="resources/window_styles.css">
     </head>
     <body>
         <div class="window">
@@ -12,7 +13,6 @@
                         <img id="tl-icon" src="" alt="Icon">
                     </td>
                     <td id="titlemenu">
-                        <button class="button" onclick="" id="tb-btn-menu">File</button>
                     </td>
                     <td id="titlebar" onmousedown="event_titlebar_down()" onmousemove="event_titlebar_move()" onmouseup="event_titlebar_up()">
                         <div id="titleborder"/>
@@ -29,34 +29,10 @@
             <div id="bottom">
             </div>
         </div>
-        <div class="container">
-            <p>Electron Test</p>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
-            <button class="button">Click</button>
+        <div class="container-wrapper">
+            <iframe class="container" src="app/main.html"></iframe>
         </div>
         <script src="window_main.js"></script>
+        <script src="app/window_action.js"></script>
     </body>
 </html>

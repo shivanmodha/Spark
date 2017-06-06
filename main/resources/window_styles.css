@@ -1,0 +1,56 @@
+.button
+{
+	border: none;
+	width: 125px;
+	height: 25px;
+	outline: 0;
+	background-color: rgba(255, 235, 170, 0.25);
+	transition: background-color 0.1s ease, color 0.1s ease;
+	transition-delay: 0s;
+}
+.button:hover
+{
+	margin: 0px;
+	border: none;
+	background-color: rgba(255, 255, 255, 0.75);
+	color: rgba(0, 0, 0, 0.75);
+}
+.button:active
+{
+	margin: 0px;
+	border: none;
+	background-color: rgba(0, 0, 0, 0.75);
+	color: rgba(255, 255, 255, 0.25);
+}
+::-webkit-scrollbar
+{
+	width: 10px;
+	height: 10px;
+	background-color: rgba(255, 255, 255, 0.00);
+}
+::-webkit-scrollbar:hover
+{
+	background-color: rgba(255, 255, 255, 0.15);
+}
+::-webkit-scrollbar-thumb
+{
+	background-color: rgba(255, 255, 255, 0.25);
+}
+::-webkit-scrollbar-thumb:hover
+{
+	background-color: rgba(255, 255, 255, 0.75);
+}
+::-webkit-scrollbar-thumb:active
+{
+	background-color: rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-button
+{
+	height: 0px;
+	width: 0px;
+	background-color: rgba(0, 0, 0, 0.0);
+}
+::-webkit-scrollbar-corner
+{
+	background-color: rgba(0, 0, 0, 0);
+}

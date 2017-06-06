@@ -77,6 +77,7 @@
 	white-space: nowrap;
 	width: 100%;
 	margin-left: 10px;
+	top: -1px;
 	vertical-align: middle;
 }
 .window #left
@@ -111,17 +112,23 @@
 	height: auto;
 	background: rgba(47, 77, 114, 0.50);
 }
-.container
+.container-wrapper
 {
 	position: fixed;
 	top: 32px;
 	left: 0px; /* BORDER ATTRIBUTE */
 	bottom: 0px; /* BORDER ATTRIBUTE */
 	right: 0px; /* BORDER ATTRIBUTE */
-	height: auto;
-	overflow: auto;
 	color: rgba(255, 255, 255, 0.5);
 	background: rgba(0, 0, 0, 0.5);
+}
+.container
+{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	border: 0px;
+	overflow: auto;
 	text-align: justified;
 }
 #tl-icon
@@ -180,27 +187,26 @@
 {
 	background-color: rgba(0, 0, 0, 0.25);
 }
-#tb-btn-control
+#tb-btn-ctrl
 {
 	-webkit-app-region: none;
-	min-width: 40px;
-    width: auto;
 	height: 32px;
 	background-color: rgba(0, 0, 0, 0);
 	float: right;
 }
-#tb-btn-control:hover
+#tb-btn-ctrl:hover
 {
 	background-color: rgba(255, 255, 255, 0.25);
 }
-#tb-btn-control:active
+#tb-btn-ctrl:active
 {
 	background-color: rgba(0, 0, 0, 0.25);
 }
 #tb-btn-menu
 {
 	-webkit-app-region: none;
-	min-width: 40px;
+	padding-left: 8px;
+	padding-right: 8px;
     width: fit-content;
 	height: 32px;
 	background-color: rgba(0, 0, 0, 0);
@@ -213,60 +219,4 @@
 #tb-btn-menu:active
 {
 	background-color: rgba(0, 0, 0, 0.25);
-}
-.button
-{
-	border: none;
-	width: 125px;
-	height: 25px;
-	outline: 0;
-	background-color: rgba(255, 235, 170, 0.25);
-	transition: background-color 0.1s ease, color 0.1s ease;
-	transition-delay: 0s;
-}
-.button:hover
-{
-	margin: 0px;
-	border: none;
-	background-color: rgba(255, 255, 255, 0.75);
-	color: rgba(0, 0, 0, 0.75);
-}
-.button:active
-{
-	margin: 0px;
-	border: none;
-	background-color: rgba(0, 0, 0, 0.75);
-	color: rgba(255, 255, 255, 0.25);
-}
-::-webkit-scrollbar
-{
-	width: 10px;
-	height: 10px;
-	background-color: rgba(255, 255, 255, 0.00);
-}
-::-webkit-scrollbar:hover
-{
-	background-color: rgba(255, 255, 255, 0.15);
-}
-::-webkit-scrollbar-thumb
-{
-	background-color: rgba(255, 255, 255, 0.25);
-}
-::-webkit-scrollbar-thumb:hover
-{
-	background-color: rgba(255, 255, 255, 0.75);
-}
-::-webkit-scrollbar-thumb:active
-{
-	background-color: rgba(0, 0, 0, 0.75);
-}
-::-webkit-scrollbar-button
-{
-	height: 0px;
-	width: 0px;
-	background-color: rgba(0, 0, 0, 0.0);
-}
-::-webkit-scrollbar-corner
-{
-	background-color: rgba(0, 0, 0, 0);
 }

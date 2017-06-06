@@ -1,13 +1,12 @@
 {
     "title": "Electron Spark",
-    "icon": "/resources/icon.png",
-    
-    "width": 300,
-    "height": 300,
-    "minWidth": 300,
+    "icon": "/resources/icon.png",    
+    "width": 800,
+    "height": 600,
+    "minWidth": 600,
     "minHeight": 300,
     "developer": false,
-    "control_box": 
+    "control_box":
     [
         {
             "name": "Close",
@@ -15,31 +14,122 @@
             "text": "#cross",
             "show": true,
             "type": "tb-btn-exit",
-            "click": "event_titlebar_exit()"
+            "click": "event_titlebar_exit()",
+            "width": 40
         },
         {
             "name": "Maximize",
             "tooltip": false,
             "text": "#box",
             "show": true,
-            "type": "tb-btn-max",
-            "click": "event_titlebar_maximize()"
+            "click": "event_titlebar_maximize()",
+            "width": 40
         },
         {
             "name": "Minimize",
             "tooltip": false,
             "text": "#line",
             "show": true,
-            "type": "tb-btn-min",
-            "click": "event_titlebar_minimize()"
+            "click": "event_titlebar_minimize()",
+            "width": 40
         },
         {
-            "name": "Test",
+            "name": "Right",
             "tooltip": false,
-            "text": "Test",
+            "text": "#right",
             "show": true,
-            "type": "tb-btn-min",
-            "click": "test"
+            "click": "event_right()",
+            "width": 20
+        },
+        {
+            "name": "Center",
+            "tooltip": false,
+            "text": "#pixel",
+            "show": true,
+            "click": "event_middle()",
+            "width": 30
+        },
+        {
+            "name": "Left",
+            "tooltip": false,
+            "text": "#left",
+            "show": true,
+            "click": "event_left()",
+            "width": 20
+        }
+    ],
+    "menu":
+    [
+        {
+            "text": "File",
+            "items":
+            [
+                {
+                    "text": "Exit",
+                    "click": "event_titlebar_exit()"
+                }
+            ]
+        },
+        {
+            "text": "Edit",
+            "items":
+            [
+                {
+                    "text": "Undo",
+                    "click": "event_titlebar_exit()"
+                },
+                {
+                    "text": "Redo",
+                    "click": "event_titlebar_exit()"
+                },
+                {
+                    "text": "#divider"
+                },
+                {
+                    "text": "Cut",
+                    "click": "event_titlebar_exit()"
+                },
+                {
+                    "text": "Copy",
+                    "click": "event_titlebar_exit()"
+                },
+                {
+                    "text": "Paste",
+                    "click": "event_titlebar_exit()"
+                },
+                {
+                    "text": "Paste and Match Style",
+                    "click": "event_titlebar_exit()"
+                },
+                {
+                    "text": "Delete",
+                    "click": "event_titlebar_exit()"
+                },
+                {
+                    "text": "Select All",
+                    "click": "event_titlebar_exit()"
+                }
+            ]
+        },
+        {
+            "text": "View",
+            "items":
+            [
+                {
+                    "text": "Exit",
+                    "click": "event_titlebar_exit()"
+                }
+            ]
+        },
+        {
+            "text": "#down",
+            "items":
+            [
+                {
+                    "text": "Exit",
+                    "click": "event_titlebar_exit()"
+                }
+            ]
         }
     ]
 }
