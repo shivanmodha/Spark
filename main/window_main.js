@@ -1,4 +1,5 @@
 const remote = require('electron').remote;
+const vibrancy = require('..')
 var maximized = false;
 var dragging = false;
 var deltaOpacity = 0.05;
@@ -71,13 +72,21 @@ var element_titlebar_close;
 var element_titlebar_control_box;
 var element_titlebar_menu_items;
 var element_titlebar_menu;
+var element_titlebar_menu_container;
+var element_container_wrapper;
+var element_container;
+var element_darken;
+var hideDropDown = false;
 function initialize_elements()
 {
     window_config = require('./resources/window_config.json');
+    element_container_wrapper = document.getElementById("wrapper");
+    element_container = document.getElementById("content");
     element_titlebar = document.getElementById("titlebar");
     element_titlebar_title = document.getElementById("titletext");
     element_titlebar_icon = document.getElementById("tl-icon");
-    element_titlebar_buttons = document.getElementById("titlebutton");    
+    element_titlebar_buttons = document.getElementById("titlebutton"); 
+    element_darken = document.getElementById("darken");   
     var titlebuttonwidth = 0;
     element_titlebar_control_box = [window_config.control_box.length];
     for (var i = 0; i < window_config.control_box.length; i++)
@@ -114,14 +123,70 @@ function initialize_elements()
     element_titlebar_buttons.style.width = titlebuttonwidth + "px";
     element_titlebar_menu = document.getElementById("titlemenu");
     element_titlebar_menu_items = [window_config.menu.length];
+    element_titlebar_menu_container = [window_config.menu.length];
     for (var i = 0; i < window_config.menu.length; i++)
     {
+        const id = i;
         element_titlebar_menu_items[i] = document.createElement("button");
         element_titlebar_menu_items[i].setAttribute("class", "button");
         element_titlebar_menu_items[i].setAttribute("id", "tb-btn-menu");
-        //element_titlebar_menu_items[i].setAttribute("onclick", window_config.menu[0].click);
+        // element_titlebar_menu_items[i].setAttribute("onclick", window_config.menu[0].click);
         element_titlebar_menu_items[i].innerHTML = getLabel(window_config.menu[i].text);
         element_titlebar_menu.appendChild(element_titlebar_menu_items[i]);
+        element_titlebar_menu_container[i] = document.createElement("div");
+        element_titlebar_menu_container[i].setAttribute("id", "dropdown");
+        element_titlebar_menu_container[i].style.display = "none";
+        for (var k = 0; k < window_config.menu[i].items.length; k++)
+        {
+            var element = document.createElement("a");
+            var text = window_config.menu[i].items[k].text;
+            if (text === "#divider")
+            {
+                element.setAttribute("id", "dropdown-divider");
+            }
+            else
+            {
+                element.innerHTML = window_config.menu[i].items[k].text;
+                element.setAttribute("id", "dropdown-content");
+            }
+            element_titlebar_menu_container[i].appendChild(element);
+        }
+        element_titlebar_menu_items[i].onclick = function()
+        {
+            for (var j = 0; j < element_titlebar_menu_items.length; j++)
+            {
+                if (j != id)
+                {
+                    element_titlebar_menu_container[j].style.display = "none";
+                }
+            }
+            var menu_width = 26;
+            for (var j = id - 1; j >= 0; j--)
+            {
+                var style = window.getComputedStyle(element_titlebar_menu_items[j], null);
+                var width = parseInt(style.getPropertyValue("width"), 10);
+                menu_width += width;
+            }
+            element_titlebar_menu_container[id].style.left = menu_width + "px";
+            if (element_titlebar_menu_container[id].style.display === "none")
+            {
+                element_darken.style.display = "block";
+                element_titlebar_menu_container[id].style.display = "block";
+            }
+            else
+            {      
+                element_darken.style.display = "none";          
+                element_titlebar_menu_container[id].style.display = "none";
+            }
+        };
+        element_container_wrapper.appendChild(element_titlebar_menu_container[i]);
+        element_titlebar.onclick = function()
+        {
+            for (var j = 0; j < element_titlebar_menu_items.length; j++)
+            {
+                element_titlebar_menu_container[j].style.display = "none";
+            }
+        };
     }
 }
 /**

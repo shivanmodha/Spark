@@ -3,8 +3,8 @@
     "icon": "/resources/icon.png",    
     "width": 800,
     "height": 600,
-    "minWidth": 600,
-    "minHeight": 300,
+    "minWidth": 475,
+    "minHeight": 475,
     "developer": false,
     "control_box":
     [
@@ -64,6 +64,25 @@
             "text": "File",
             "items":
             [
+                {
+                    "text": "New",
+                    "click": "event_titlebar_exit()"
+                },
+                {
+                    "text": "Open",
+                    "click": "event_titlebar_exit()"
+                },
+                {
+                    "text": "Save",
+                    "click": "event_titlebar_exit()"
+                },
+                {
+                    "text": "Save As",
+                    "click": "event_titlebar_exit()"
+                },
+                {
+                    "text": "#divider"
+                },
                 {
                     "text": "Exit",
                     "click": "event_titlebar_exit()"
@@ -125,6 +144,18 @@
             "text": "#down",
             "items":
             [
+                {
+                    "text": "Extended Item",
+                    "click": "event_titlebar_exit()"
+                },
+                {
+                    "text": "New Item",
+                    "click": "event_titlebar_exit()"
+                },
+                {
+                    "text": "New Item",
+                    "click": "event_titlebar_exit()"
+                },
                 {
                     "text": "Exit",
                     "click": "event_titlebar_exit()"
