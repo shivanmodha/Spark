@@ -187,6 +187,14 @@ function initialize_elements()
                 element_titlebar_menu_container[j].style.display = "none";
             }
         };
+        element_darken.onclick = function()
+        {            
+            element_darken.style.display = "none";    
+            for (var j = 0; j < element_titlebar_menu_items.length; j++)
+            {
+                element_titlebar_menu_container[j].style.display = "none";
+            }
+        };
     }
 }
 /**
